@@ -11,6 +11,6 @@ setup(
     keywords = ["streams", "kinesis"],
     setup_requires = ["pytest-runner"],
     install_requires = ["boto3==1.4.1"],
-    tests_requires = ["pytest==3.0.5","moto==0.4.30","sure==1.4.0"],
-    licence = 'MIT'
+    test_requires = ["pytest==3.0.5","moto==0.4.30","sure==1.4.0"],
+    license = 'MIT'
 )
