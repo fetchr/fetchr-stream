@@ -1,5 +1,5 @@
-from fetchr_kinesis import push_to_erp_stream
-from fetchr_erpstream_utils import NotAJSONError
+from fetchr.kinesis import push_to_erp_stream
+from fetchr.stream_utils import NotAJSONError
 from moto import mock_kinesis
 
 import pytest

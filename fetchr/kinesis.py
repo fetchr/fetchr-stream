@@ -1,4 +1,4 @@
-from fetchr_stream_utils import as_json_of, get_uuid
+from stream_utils import as_json_of, get_uuid
 from botocore.exceptions import ClientError
 
 import boto3
