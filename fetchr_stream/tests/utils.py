@@ -1,5 +1,5 @@
 import pytest
-from fetchr.stream_utils import as_json_of, NotAJSONError
+from fetchr_stream.stream_utils import as_json_of, NotAJSONError
 
 def test_valid_string_json_payload():
     _payload = "addf"

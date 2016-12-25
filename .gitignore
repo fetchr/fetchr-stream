@@ -1,3 +1,6 @@
 __pycache__/
 .cache/
 *.pyc
+.pypirc
+.eggs/
+fetchr_stream.egg-info/
