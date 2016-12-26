@@ -17,7 +17,7 @@ def _is_success_put_response(_put_response):
 
     return False
 
-def push_to_erp_stream(stream_name, access_key_id, secret_access_key, payload_key, payload, region="ap-southeast-1"):
+def push_to_stream(stream_name, access_key_id, secret_access_key, payload_key, payload, region="ap-southeast-1"):
     if not isinstance(payload_key, basestring):
         return False, "Payload key should be a string"
 
