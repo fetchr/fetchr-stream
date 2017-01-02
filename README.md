@@ -11,7 +11,7 @@ How to use
 -------------
 
 ```python
-    from kinesis_stream.kinesis import push_to_stream
+    from fetchr_stream.kinesis import push_to_stream
     
     status, message = push_to_stream("stream_name", "aws-access-key", "aws-secret-access-key", "payload-key", "json_serializable_payload")
 ```
