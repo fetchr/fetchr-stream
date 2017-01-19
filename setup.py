@@ -8,7 +8,7 @@ setup(
     author = "Manoj Kumar",
     author_email = "harish224227@gmail.com",
     url = "https://https://github.com/fetchr/fetchr-stream",
-    download_url = "https://github.com/fetchr/fetchr-stream/archive/0.1.1.tar.gz",
+    download_url = "https://github.com/fetchr/fetchr-stream/archive/0.2.0.tar.gz",
     keywords = ["streams", "kinesis"],
     setup_requires = ["pytest-runner"],
     install_requires = ["boto3==1.4.1", "netifaces==0.10.5"],
