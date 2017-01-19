@@ -1,4 +1,4 @@
-from stream_utils import as_json_of, get_uuid
+from stream_utils import as_json_of, get_uuid, get_current_time_as_string
 from botocore.exceptions import ClientError
 
 import boto3
@@ -22,10 +22,16 @@ def push_to_stream(stream_name, access_key_id, secret_access_key, payload_key, p
         return False, "Payload key should be a string"
 
     json_payload = as_json_of(payload)
+    partition_key = get_uuid()
+
+    meta = {
+        "message_id": partition_key,
+        "time": get_current_time_as_string()
+    }
     try:
         _kinesis = boto3.client("kinesis", aws_access_key_id=access_key_id, aws_secret_access_key=secret_access_key, region_name=region)
-        _stream_payload = { "key": payload_key, "payload": payload }
-        _put_response = _kinesis.put_record(StreamName=stream_name, Data=json.dumps(_stream_payload), PartitionKey=get_uuid())
+        _stream_payload = { "key": payload_key, "data": payload, "meta": meta }
+        _put_response = _kinesis.put_record(StreamName=stream_name, Data=json.dumps(_stream_payload), PartitionKey=partition_key)
         return _is_success_put_response(_put_response), _put_response
     except ClientError:
         logger.exception("Kinesis push exception")

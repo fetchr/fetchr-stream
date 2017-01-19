@@ -3,7 +3,7 @@ from setuptools  import setup
 setup(
     name = "fetchr_stream",
     packages = ["fetchr_stream"],
-    version = "0.1.1",
+    version = "0.2.0",
     description = "Wrapper for pushing the data into streams",
     author = "Manoj Kumar",
     author_email = "harish224227@gmail.com",
@@ -11,7 +11,7 @@ setup(
     download_url = "https://github.com/fetchr/fetchr-stream/archive/0.1.1.tar.gz",
     keywords = ["streams", "kinesis"],
     setup_requires = ["pytest-runner"],
-    install_requires = ["boto3==1.4.1"],
+    install_requires = ["boto3==1.4.1", "netifaces==0.10.5"],
     test_requires = ["pytest==3.0.5","moto==0.4.30","sure==1.4.0"],
     license = 'MIT'
 )

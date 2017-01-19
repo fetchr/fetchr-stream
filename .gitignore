@@ -4,5 +4,6 @@ __pycache__/
 .pypirc
 .eggs/
 dist/
+.idea/
 .env
 fetchr_stream.egg-info/
